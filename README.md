@@ -1,10 +1,26 @@
 # crud-midd-db-validations-deploy
 
-# 1. create env
-execute wsl command -> source env/bin/execute
+#  1 instalar virtualenv de python
 
-# 2 install libraries
-pip3 install -r requirements.txt
+apt install python3-venv
 
-# 3 execute project
+# 2 crear el virtual env
+
+python3 -m venv venv
+
+# 3 Activar el venv
+
+En Linux
+
+source venv/bin/activate
+
+En Win
+
+source venv/script/activate
+
+# 4 Una vez activado instalar lo requirements del archivo requirements.txt
+
+pip install -r requirements.txt
+
+# 5 execute project
 uvicorn main:app --reload
