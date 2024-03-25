@@ -1,7 +1,8 @@
 from jwt import encode, decode
+from config.config import settings
 
-key = 'secretkey'
-algorithm = 'HS256'
+key = settings.KEY_SECRET_JWT
+algorithm = settings.ALGORITHM_SECRET_JWT
 
 def create_token(data: dict) -> str:
     token :str = encode(payload=data, key=key, algorithm=algorithm)
